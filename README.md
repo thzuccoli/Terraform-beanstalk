@@ -11,11 +11,10 @@ Neste App são exploradas as seguintes técnicas e tecnologias:
 - Criação da imagem Docker com a aplicação para subida no ECR (serviço de armazenamento de imagens da AWS) atraves do arquivo /clientes-leo-api/Dockerfile
 - Preparo da imagem após o deploy no ECR para subida no beanstalk (criação do arquivo Dockerrun.aws.json e envia-lo para o .zip como producao.zip)
 - Criação dos recursos abaixo para provisionamento da infraestrutura na AWS
-  
-  **recurso do beanstalk atraves do arquivo /infra/beanstalk.tf (aplicação/ ambiente/ versão da aplicação)
-  **recurso do ECR atraves do arquivo /infra/ecr.tf (criação de um repositorio para armazenar as imagens criada)
-  **recurso do s3 atraves do arquivo /infra/s3.tf (criação de um bucket para armazenar a imagem .zip que o beanstalk irá ler)
-  **recurso para as roles e policy relacionado ao serviço do beanstalk atraves do arquivo /infra/role.tf
+* recurso do beanstalk atraves do arquivo /infra/beanstalk.tf (aplicação/ ambiente/ versão da aplicação)
+* recurso do ECR atraves do arquivo /infra/ecr.tf (criação de um repositorio para armazenar as imagens criada)
+* recurso do s3 atraves do arquivo /infra/s3.tf (criação de um bucket para armazenar a imagem .zip que o beanstalk irá ler)
+* recurso para as roles e policy relacionado ao serviço do beanstalk atraves do arquivo /infra/role.tf
 
 ## 🛠️ Abrir e rodar o projeto
 
