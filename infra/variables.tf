@@ -1,13 +1,19 @@
-variable "regiao_aws" {
-  type = string
-}
-variable "chave" {
+variable "nome" {
     type = string
 }
-variable "instancia" {
-  type = string
+
+variable "descricao" {
+    type = string
 }
 
-variable "grupoDeSeguranca" {
-  type = string
+variable "max" {
+    type = number
+}
+
+variable "maquina" {
+    type = string
+}
+
+variable "ambiente" {
+    type = string
 }
