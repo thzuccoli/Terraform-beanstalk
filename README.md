@@ -13,8 +13,8 @@ Neste App são exploradas as seguintes técnicas e tecnologias:
 - Criação dos recursos abaixo para provisionamento da infraestrutura na AWS
 - **recurso do beanstalk atraves do arquivo /infra/beanstalk.tf (aplicação/ ambiente/ versão da aplicação)
 - **recurso do ECR atraves do arquivo /infra/ecr.tf (criação de um repositorio para armazenar as imagens criada)
-* recurso do s3 atraves do arquivo /infra/s3.tf (criação de um bucket para armazenar a imagem .zip que o beanstalk irá ler)
-* recurso para as roles e policy relacionado ao serviço do beanstalk atraves do arquivo /infra/role.tf
+- **recurso do s3 atraves do arquivo /infra/s3.tf (criação de um bucket para armazenar a imagem .zip que o beanstalk irá ler)
+- **recurso para as roles e policy relacionado ao serviço do beanstalk atraves do arquivo /infra/role.tf
 
 ## 🛠️ Abrir e rodar o projeto
 
