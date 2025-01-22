@@ -2,27 +2,19 @@
 
 Primeiro projeto de Infraestrutura como código com docker, utilizando Terraform para provisionamento e AWS como provedor da infraestrutura.
 
-## 🔨 Funcionalidades do projeto
-
-A partir desse projeto você pode:
-
-- Criar ambientes para aplicações Docker
-- Separar o seu codigo em 2 ambientes, um de produção e um de homologação
-- Configurar maquinas para executar um container com uma API em Django automaticamente
-- Preparar uma infraestrutura elastica
-
 ## ✔️ Técnicas e tecnologias utilizadas
 
 Neste App são exploradas as seguintes técnicas e tecnologias:
 
-- **Criação de maquinas para executar containers Docker**: criação de maquinas virtuias no ambiente EC2 (Elastic Compute Cloud) da AWS feito de forma automatica pelo Elastic Beanstalk
-- **Criação de imagens Docker**: criação das imagens a serem utilizadas pelo Docker 
-- **Elastic Constainer Registry**: o repositorio de containers da AWS, onde vamos colocar as nossas imagens.
-- **Separação de ambientes**: 2 ambientes separados, construidos de forma automatica pelo Terraform, reultilizando codigo.
-
-## 📁 Acesso ao projeto
-
-Você pode [baixar o zip](https://github.com/leollo98/iac-curso4/archive/refs/heads/Aula_5.zip) ou [acessar o código fonte](https://github.com/leollo98/iac-curso4/tree/Aula_5) do projeto final.
+- Segmentação dos ambientes em modulos (producao e homologacao)
+- Criação de um bucket s3 para armazenamento do arquivo responsavel pelo estado da infraestutura (terraform.tfstate) atraves do arquivo /env/prod/backend.tf
+- Criação da imagem Docker com a aplicação para subida no ECR (serviço de armazenamento de imagens da AWS) atraves do arquivo /clientes-leo-api/Dockerfile
+- Preparo da imagem após o deploy no ECR para subida no beanstalk (criação do arquivo Dockerrun.aws.json e envia-lo para o .zip como producao.zip)
+- Criação dos recursos abaixo para provisionamento da infraestrutura na AWS
+  **recurso do beanstalk atraves do arquivo /infra/beanstalk.tf (aplicação/ ambiente/ versão da aplicação)
+  **recurso do ECR atraves do arquivo /infra/ecr.tf (criação de um repositorio para armazenar as imagens criada)
+  **recurso do s3 atraves do arquivo /infra/s3.tf (criação de um bucket para armazenar a imagem .zip que o beanstalk irá ler)
+  **recurso para as roles e policy relacionado ao serviço do beanstalk atraves do arquivo /infra/role.tf
 
 ## 🛠️ Abrir e rodar o projeto
 
