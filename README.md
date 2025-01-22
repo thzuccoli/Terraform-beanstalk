@@ -15,10 +15,10 @@ A partir desse projeto você pode:
 
 Neste App são exploradas as seguintes técnicas e tecnologias:
 
-- **Criação de maquinas para executar containers Docker: criação de maquinas virtuias no ambiente EC2 (Elastic Compute Cloud) da AWS feito de forma automatica pelo Elastic Beanstalk
-- **Criação de imagens Docker: criação das imagens a serem utilizadas pelo Docker
-- **Elastic Constainer Registry: o repositorio de containers da AWS, onde vamos colocar as nossas imagens
-- **Separação de ambientes: 2 ambientes separados, construidos de forma automatica pelo Terraform, reultilizando codigo.
+- Criação de maquinas para executar containers Docker: criação de maquinas virtuias no ambiente EC2 (Elastic Compute Cloud) da AWS feito de forma automatica pelo Elastic Beanstalk
+- Criação de imagens Docker: criação das imagens a serem utilizadas pelo Docker
+- Elastic Constainer Registry: o repositorio de containers da AWS, onde vamos colocar as nossas imagens
+- Separação de ambientes: 2 ambientes separados, construidos de forma automatica pelo Terraform, reultilizando codigo.
 
 ## 🛠️ Abrir e rodar o projeto
 
