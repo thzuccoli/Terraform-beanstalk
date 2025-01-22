@@ -1,6 +1,6 @@
 # Resumo do projeto
 
-Primeiro projeto de Infraestrutura como código com docker, utilizando Terraform para provisionamento e AWS como provedor da infraestrutura.
+Projeto onde houve a implantação de uma API via terraform na AWS usando o elasticbeanstalk
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
