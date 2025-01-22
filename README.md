@@ -1,18 +1,24 @@
-Projeto onde houve a implantação de uma API via terraform na AWS usando o elasticbeanstalk
+Resumo do projeto
+Primeiro projeto de Infraestrutura como código com docker, utilizando Terraform para provisionamento e AWS como provedor da infraestrutura.
 
+🔨 Funcionalidades do projeto
+A partir desse projeto você pode:
+
+Criar ambientes para aplicações Docker
+Separar o seu codigo em 2 ambientes, um de produção e um de homologação
+Configurar maquinas para executar um container com uma API em Django automaticamente
+Preparar uma infraestrutura elastica
 ✔️ Técnicas e tecnologias utilizadas
+Neste App são exploradas as seguintes técnicas e tecnologias:
 
-- Segmentação dos ambientes em modulos (producao e homologacao)
-- Criação de um bucket s3 para armazenamento do arquivo responsavel pelo estado da infraestutura (terraform.tfstate) atraves do arquivo /env/prod/backend.tf
-- Preparo da imagem com a aplicação (Dockerfile) para subida no ECR (serviço de armazenamento de imagens da AWS) atraves do arquivo /clientes-leo-api/Dockerfile
-- Preparo da imagem após o deploy no ECR para subida no beanstalk (criação do arquivo Dockerrun.aws.json e envia-lo para o .zip como producao.zip)
-- Criação dos recursos abaixo para provisionamento da infraestrutura na AWS
-  **recurso do beanstalk atraves do arquivo /infra/beanstalk.tf (aplicação/ ambiente/ versão da aplicação)
-  **recurso do ECR atraves do arquivo /infra/ecr.tf (criação de um repositorio para armazenar as imagens criada)
-  **recurso do s3 atraves do arquivo /infra/s3.tf (criação de um bucket para armazenar a imagem .zip que o beanstalk irá ler)
-  **recurso para as roles e policy relacionado ao serviço do beanstalk atraves do arquivo /infra/role.tf
+Criação de maquinas para executar containers Docker: criação de maquinas virtuias no ambiente EC2 (Elastic Compute Cloud) da AWS feito de forma automatica pelo Elastic Beanstalk
+Criação de imagens Docker: criação das imagens a serem utilizadas pelo Docker
+Elastic Constainer Registry: o repositorio de containers da AWS, onde vamos colocar as nossas imagens.
+Separação de ambientes: 2 ambientes separados, construidos de forma automatica pelo Terraform, reultilizando codigo.
+📁 Acesso ao projeto
+Você pode baixar o zip ou acessar o código fonte do projeto final.
 
-  🛠️ Abrir e rodar o projeto
+🛠️ Abrir e rodar o projeto
 O projeto foi desenvolvido no VSC (Visual Studio Code), sendo assim, instale o VSC (pode ser uma versão mais recente) e, na tela inicial, procure a opção extenções, ou aperte Ctrl+Shift+X, e busque por HashiCorp Terraform, assim teremos o suporte do intellisense, tornando o trabalho de escrever o código mais rapido.
 
 Caso baixou o zip, extraia o projeto antes de procurá-lo, pois não é possível abrir via arquivo zip
@@ -26,3 +32,5 @@ aws elasticbeanstalk update-environment --environment-name ambinete-de-producao 
 ou para homologação com:
 
 aws elasticbeanstalk update-environment --environment-name ambinete-de-homolog --version-label ambinete-de-homolog
+
+🏆
