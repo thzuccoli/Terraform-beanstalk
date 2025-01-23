@@ -26,10 +26,10 @@ Vá até a paste a abra a pasta do projeto. Apos abrir o projeto abra um termina
 
 Em seguida atualize o ambiente para a ultima versão de produção com:
 
-```aws elasticbeanstalk update-environment --environment-name ambinete-de-producao --version-label ambinete-de-producao```
+```aws elasticbeanstalk update-environment --environment-name ambiente-de-producao --version-label ambiente-de-producao```
 
 ou para homologação com:
 
-```aws elasticbeanstalk update-environment --environment-name ambinete-de-homolog --version-label ambinete-de-homolog```
+```aws elasticbeanstalk update-environment --environment-name ambiente-de-homolog --version-label ambiente-de-homolog```
 
 🏆
